@@ -4,6 +4,6 @@
     
     <h1>hello world</h1>
 
-    <videogames-component></videogames-component>
+    <videogames-component user="{{Auth::check()}}"></videogames-component>
 
 @endsection
