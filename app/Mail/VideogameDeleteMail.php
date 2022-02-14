@@ -16,9 +16,11 @@ class VideogameDeleteMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+
+    public $videogame;
+    public function __construct($videogame)
     {
-        //
+        $this -> videogame = $videogame;
     }
 
     /**
@@ -28,6 +30,7 @@ class VideogameDeleteMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this -> from('admin@miosito.com')
+                     -> view('mail.videogameDelete');
     }
 }

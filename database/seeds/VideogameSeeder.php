@@ -12,6 +12,6 @@ class VideogameSeeder extends Seeder
      */
     public function run()
     {
-        factory(Videogame::class, 10) -> create();
+        factory(Videogame::class, 100) -> create();
     }
 }
